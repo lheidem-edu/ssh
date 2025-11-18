@@ -29,7 +29,5 @@ jobs:
                   git commit -m "Update authorized_keys for $(basename "$machine")"
               fi
           done
-
-          if [ -n "$(git status --porcelain)" ]; then
-              git push origin master
-          fi
+          
+          git push origin master
