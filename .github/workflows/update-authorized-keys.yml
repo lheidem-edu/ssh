@@ -1,0 +1,35 @@
+name: update-authorized-keys
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  update-authorized-keys:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout_repository
+        uses: actions/checkout@v3
+      - name: install_jq
+        run: |
+          sudo apt-get update && sudo apt-get install -y jq
+      - name: update_authorized_keys
+        run: |
+          ./update.sh
+      - name: configure_git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: commit_and_push_changes
+        run: |
+          for machine in machines/*/; do
+              if [ -n "$(git status --porcelain "$machine/authorized_keys")" ]; then
+                  git add "$machine/authorized_keys"
+                  git commit -m "Update authorized_keys for $(basename "$machine")"
+              fi
+          done
+
+          if [ -n "$(git status --porcelain)" ]; then
+              git push origin master
+          fi
