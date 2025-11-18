@@ -1,0 +1,22 @@
+{
+    "machines": [
+        {
+            "name": "vmhostc.lheidem-inf.net",
+            "users": [
+                "lheidem"
+            ]
+        },
+        {
+            "name": "vmhostd.lheidem-inf.net",
+            "users": [
+                "lheidem"
+            ]
+        },
+        {
+            "name": "vmbackup1.lheidem-inf.net",
+            "users": [
+                "lheidem"
+            ]
+        }
+    ]
+}
