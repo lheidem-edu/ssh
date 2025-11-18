@@ -3,13 +3,17 @@
         {
             "name": "vmhostc.lheidem-inf.net",
             "users": [
-                "lheidem"
+                "lheidem",
+                "root_at_vmhostc",
+                "root_at_vmhostd"
             ]
         },
         {
             "name": "vmhostd.lheidem-inf.net",
             "users": [
-                "lheidem"
+                "lheidem",
+                "root_at_vmhostc",
+                "root_at_vmhostd"
             ]
         },
         {
