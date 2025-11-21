@@ -1,6 +1,42 @@
 {
     "machines": [
         {
+            "name": "dus1-edge1.lheidem-inf.net",
+            "users": [
+                "lheidem"
+            ]
+        },
+        {
+            "name": "dus1-edge2.lheidem-inf.net",
+            "users": [
+                "lheidem"
+            ]
+        },
+        {
+            "name": "dus1-core1.lheidem-inf.net",
+            "users": [
+                "lheidem"
+            ]
+        },
+        {
+            "name": "dus1-core2.lheidem-inf.net",
+            "users": [
+                "lheidem"
+            ]
+        },
+        {
+            "name": "dus1-tun1.lheidem-inf.net",
+            "users": [
+                "lheidem"
+            ]
+        },
+        {
+            "name": "dus1-tun2.lheidem-inf.net",
+            "users": [
+                "lheidem"
+            ]
+        },
+        {
             "name": "vmhostc.lheidem-inf.net",
             "users": [
                 "lheidem",
